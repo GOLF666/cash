@@ -1,0 +1,6 @@
+<!-- res/drawable/bg_income_detail_chip.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 設定背景顏色為綠色 -->
+    <solid android:color="#C8E6C9"/> <!-- 淺綠色背景，可以根據需要調整顏色 -->
+    <corners android:radius="24dp"/>
+</shape>

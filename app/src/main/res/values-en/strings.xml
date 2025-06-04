@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">cash</string>
+    <string name="Logoname">MONEYTROL</string>
+    <string name="Date">Date</string>
+    <string name="logo">Date Logo</string>
+    <string name="money_value">$900</string>
+
+    <!-- Buttons -->
+    <string name="button_income">Income</string>
+    <string name="button_expense">Expense</string>
+    <string name="click_to_check">Tap to check monthly expenses</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+
+    <!-- Calculator buttons -->
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_plus">+</string>
+    <string name="_minus">-</string>
+    <string name="_multiply">*</string>
+    <string name="_divide">/</string>
+    <string name="_equal">=</string>
+    <string name="_dot">.</string>
+
+    <!-- Labels -->
+    <string name="balance">Finance Report</string>
+    <string name="result">Result</string>
+    <string name="title">Title</string>
+    <string name="amount">Amount</string>
+    <string name="type">Type</string>
+    <string name="date">Date</string>
+
+    <!-- Labels with format -->
+    <string name="title_label">%1$s</string>
+    <string name="amount_label">$ %1$s</string>
+    <string name="type_label">%1$s</string>
+    <string name="date_label">%1$s</string>
+    <string name="category_label">%s</string>
+
+    <!-- Categories -->
+    <string name="breakfast">Bfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="dessert">Dessert</string>
+    <string name="drink">Drink</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="transport">Trnsprt</string>
+    <string name="digital">Digital</string>
+    <string name="shopping">Shop</string>
+    <string name="entertainment">Entmt</string>
+    <string name="daily">Daily</string>
+    <string name="rent">Rent</string>
+    <string name="rents">Rents</string>
+    <string name="medical">Medical</string>
+    <string name="social">Social</string>
+    <string name="gift">Gift</string>
+    <string name="other">Other</string>
+
+    <!-- Income Categories -->
+    <string name="salary">Salary</string>
+    <string name="dividend">Dvdend</string>
+    <string name="bonus">Bonus</string>
+    <string name="investment">Invst</string>
+    <string name="trade">Trade</string>
+    <string name="rebate">Rebate</string>
+    <string name="others">Others</string>
+
+    <string name="category_selected">Selected category: %1$s</string>
+    <string name="insert_success">Insert successful!</string>
+    <string name="insert_failed">Insert failed!</string>
+    <string name="no_data">No data available</string>
+    <string name="record_deleted">Record deleted</string>
+
+    <string name="date_format">yyyy-MM-dd</string>
+
+    <string name="export">export</string>
+    <string name="select_export_format">select export format</string>
+    <string name="export_success">✅ export success</string>
+    <string name="export_fail">❌ export fail</string>
+
+    <string name="reminder_title">📒 Time to record expenses!</string>
+    <string name="reminder_text">remember to enter today’s income and expenses!</string>
+    <string name="reminder_time_picker">Choose daily reminder </string>
+    <string name="reminder_enabled">Reminder enabled</string>
+    <string name="reminder_disabled">Reminder disabled</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="channel_name">Reminder</string>
+    <string name="channel_description">Daily cashbook reminder</string>
+
+    <string name="dialog_title">Menu</string>
+    <!-- 選擇日期 -->
+    <string name="btn_date_picker">Choose Date</string>
+    <!-- 恢復全部 -->
+    <string name="btn_reset">Date Reset</string>
+    <!-- 檢視圖表 -->
+    <string name="btn_chart">View Chart</string>
+
+    <!-- Tabs -->
+    <string name="tab_expense">Expense</string>
+    <string name="tab_income">Income</string>
+    <string name="tab_balance">Balance</string>
+
+    <!-- Filter bar -->
+    <string name="btn_week">Week</string>
+    <string name="btn_month">Mth</string>
+    <string name="btn_year">Year</string>
+    <string name="btn_custom">Cstm</string>
+
+    <!-- Others -->
+    <string name="date_range_format">%1$s ~ %2$s</string>
+    <string name="total_expense">Total Expense</string>
+    <string name="total_income">Total Income</string>
+    <string name="expense_detail">Expense Detail</string>
+    <string name="income_detail">Income Detail</string>
+
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="confirm">OK</string>
+
+
+    <string name="toast_choose_date">Please choose start and end date</string>
+    <string name="expense_detail_title">Expense Detail</string>
+
+    <!-- Google Login -->
+    <string name="sign_in_with_google">Sign in with Google</string>
+
+    <!-- Terms of Service Text -->
+    <string name="tos_text">By creating an account, you agree to cash’s Terms of Service</string>
+
+    <!-- Notice Block (Notes) -->
+    <string name="notes">
+        Notes:
+        \n1. Only Google Sign-In is supported.
+        \n2. Data cannot be transferred between accounts
+        \n3. If you cannot sign in, please contact Google Customer Support.
+    </string>
+
+    <string name="login_click">Sign In</string>
+    <string name="login_tip">Sign in to backup your data</string>
+    <string name="login_out">Sign Out</string>
+    <string name="logged_in_tip">Hello, %1$s! Signed in</string>
+    <string name="logged_out_toast">Signed out</string>
+    <string name="toast_login_first">Please sign in your acc first</string>
+
+    <string name="button_set_budget">Set Budget</string>
+    <string name="budget_set_toast">Please set your budget amount first!</string>
+    <string name="budget_setting_title">Budget Setting</string>
+    <string name="budget_hint">Enter your budget amount</string>
+    <string name="budget_save">Save</string>
+    <string name="budget_cancel">Cancel</string>
+    <string name="budget_saved">Budget saved!</string>
+    <string name="budget_invalid">Please enter a valid amount</string>
+    <string name="budget_daily">Daily</string>
+    <string name="budget_weekly">Week</string>
+    <string name="budget_monthly">Month</string>
+    <string name="budget_show_text">Set: $%1$.2f</string>
+    <string name="budget_reset">reset</string>
+    <string name="budget_reset_success">reset success</string>
+
+    <string name="budget_exceed_50">⚠️budget exceeds 50%</string>
+    <string name="budget_exceed_100">🚨budget has been used up，Please be careful with spending</string>
+
+    <!-- Switch Language -->
+    <string name="language_switch">中文 / English</string>
+</resources>

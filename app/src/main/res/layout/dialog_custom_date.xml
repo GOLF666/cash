@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="28dp"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_start_date"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="@string/start_date"
+        android:backgroundTint="#F8BBD0"
+        android:textColor="#C2185B"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_end_date"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="@string/end_date"
+        android:backgroundTint="#F8BBD0"
+        android:textColor="#C2185B"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="@string/confirm"
+        android:backgroundTint="#F48FB1"
+        android:textColor="#C2185B"
+        android:textStyle="bold"/>
+</LinearLayout>

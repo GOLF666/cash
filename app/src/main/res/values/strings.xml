@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 中文（預設） -->
+    <string name="app_name">cash</string>
+    <string name="Logoname">金錢管家</string>
+    <string name="Date">日期</string>
+    <string name="logo">日期logo</string>
+    <string name="money_value">$900</string>
+    <string name="button_income">收入</string>
+    <string name="button_expense">支出</string>
+    <string name="click_to_check">點擊查詢當月消費</string>
+    <string name="cancel">取消</string>
+    <string name="add">新增</string>
+    <string name="balance">財務報表</string>
+    <string name="result">結果</string>
+    <string name="title">標題</string>
+    <string name="amount">金額</string>
+    <string name="type">類型</string>
+    <string name="date">日期</string>
+    <string name="title_label">%1$s</string>
+    <string name="amount_label"> $ %1$s</string>
+    <string name="type_label">%1$s</string>
+    <string name="date_label">%1$s</string>
+    <string name="category_label">%s</string>
+
+    <!-- 數字與符號鍵盤 -->
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_0">0</string>
+    <string name="_plus">+</string>
+    <string name="_minus">-</string>
+    <string name="_multiply">*</string>
+    <string name="_divide">/</string>
+    <string name="_dot">.</string>
+    <string name="_equal">=</string>
+
+    <!-- 類別（中文） -->
+    <string name="salary">薪水</string>
+    <string name="bonus">獎金</string>
+    <string name="rebate">回饋</string>
+    <string name="trade">交易</string>
+    <string name="dividend">股息</string>
+    <string name="rent">房租</string>
+    <string name="rents">租金</string>
+    <string name="investment">投資</string>
+    <string name="others">其他</string>
+
+    <string name="breakfast">早餐</string>
+    <string name="lunch">午餐</string>
+    <string name="dinner">晚餐</string>
+    <string name="dessert">甜點</string>
+    <string name="drink">飲料</string>
+    <string name="alcohol">酒類</string>
+    <string name="transport">交通</string>
+    <string name="digital">數位</string>
+    <string name="shopping">購物</string>
+    <string name="entertainment">娛樂</string>
+    <string name="daily">日常</string>
+    <string name="medical">醫療</string>
+    <string name="social">社交</string>
+    <string name="gift">禮物</string>
+    <string name="other">其他</string>
+
+    <string name="date_format">yyyy年MM月dd日</string>
+
+    <string name="category_selected">已選類別：%1$s</string>
+    <string name="insert_success">新增成功！</string>
+    <string name="insert_failed">新增失敗！</string>
+    <string name="no_data">目前沒有資料</string>
+    <string name="record_deleted">資料已刪除</string>
+
+    <string name="export">匯出資料</string>
+    <string name="select_export_format">選擇匯出格式</string>
+    <string name="export_success">✅ 匯出成功</string>
+    <string name="export_fail">❌ 匯出失敗</string>
+
+    <string name="reminder_title">📒 該記帳囉！</string>
+    <string name="reminder_text">記得輸入今天的支出與收入哦～</string>
+    <string name="reminder_time_picker">選擇提醒時間</string>
+    <string name="reminder_enabled">提醒已啟用</string>
+    <string name="reminder_disabled">提醒已取消</string>
+    <string name="daily_reminder">每日提醒</string>
+    <string name="channel_name">記帳提醒</string>
+    <string name="channel_description">每日記帳提醒通知</string>
+
+    <string name="dialog_title">功能選單</string>
+    <!-- 選擇日期 -->
+    <string name="btn_date_picker">選擇日期</string>
+    <!-- 恢復全部 -->
+    <string name="btn_reset">日期重置</string>
+    <!-- 檢視圖表 -->
+    <string name="btn_chart">檢視圖表</string>
+
+    <!-- 頁籤 -->
+    <string name="tab_expense">支出</string>
+    <string name="tab_income">收入</string>
+    <string name="tab_balance">結餘</string>
+
+    <!-- 篩選條 -->
+    <string name="btn_week">週</string>
+    <string name="btn_month">月</string>
+    <string name="btn_year">年</string>
+    <string name="btn_custom">自訂</string>
+
+    <!-- 其他 -->
+    <string name="date_range_format">%1$s ~ %2$s</string>
+    <string name="total_expense">總支出</string>
+    <string name="total_income">總收入</string>
+    <string name="expense_detail">支出明細</string>
+    <string name="income_detail">收入明細</string>
+
+
+
+    <string name="start_date">開始日期</string>
+    <string name="end_date">結束日期</string>
+    <string name="confirm">確認</string>
+
+
+    <string name="toast_choose_date">請選擇開始與結束日期</string>
+    <string name="expense_detail_title">支出明細</string>
+
+    <string name="sign_in_with_google">使用 Google 登入</string>
+
+    <!-- 服務條款文字 -->
+    <string name="tos_text">點擊建立帳號，即代表同意遵守 Cash 的服務條款</string>
+
+    <!-- 注意事項區塊 -->
+    <string name="notes">
+        注意事項：
+        \n1. 目前僅提供 Google 登錄。
+        \n2. 帳號之間資料無法互相轉換
+        \n3. 若無法登入，請聯絡 Google 客服協助。
+    </string>
+
+    <string name="login_click">點擊登入</string>
+    <string name="login_tip">登入以備份資料</string>
+    <string name="login_out">點擊登出</string>
+    <string name="logged_in_tip">您好，%1$s！已登入</string>
+    <string name="logged_out_toast">已登出</string>
+    <string name="toast_login_first">請先登入賬號</string>
+
+    <string name="button_set_budget">預算設定</string>
+    <string name="budget_set_toast">請先設定預算金額！</string>
+    <string name="budget_setting_title">預算設定</string>
+    <string name="budget_hint">請輸入預算金額</string>
+    <string name="budget_save">儲存預算</string>
+    <string name="budget_cancel">取消</string>
+    <string name="budget_saved">預算已儲存！</string>
+    <string name="budget_invalid">請輸入有效的金額</string>
+    <string name="budget_daily">每日</string>
+    <string name="budget_weekly">每週</string>
+    <string name="budget_monthly">每月</string>
+    <string name="budget_show_text">已設：$%1$.2f</string>
+    <string name="budget_reset">重置</string>
+    <string name="budget_reset_success">預算已重置！</string>
+
+    <string name="budget_exceed_50">⚠️ 預算已超過50%</string>
+    <string name="budget_exceed_100">🚨預算已用盡，請留意支出</string>
+
+    <!-- Switch Language -->
+    <string name="language_switch">中文 / English</string>
+</resources>
+

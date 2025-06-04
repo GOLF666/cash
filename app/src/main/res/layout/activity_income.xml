@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- 1. 標題 + 日期 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/purple_200">
+
+        <TextView
+            android:id="@+id/logoName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/button_income"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:text="2025/05/13"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"/>
+    </FrameLayout>
+
+    <!-- 類別選擇區 -->
+    <ScrollView
+        android:id="@+id/scrollCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+        <GridLayout
+            android:id="@+id/gridCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins">
+
+            <!-- 薪水 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/button_salary"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/salary"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="薪水" />
+
+                <TextView
+                    android:id="@+id/text_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salary"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/button_bonus"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/bonus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="獎金" />
+
+                <TextView
+                    android:id="@+id/text_bonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bonus"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 早餐 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_rebate"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rebate"
+                    android:contentDescription="回饋"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rebate"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- 午餐 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_trade"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/trade"
+                    android:contentDescription="交易"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/trade"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- 晚餐 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_dividend"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dividend"
+                    android:contentDescription="股息"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/dividend"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- 點心 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_rents"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rent"
+                    android:contentDescription="租金"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rents"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- 飲料 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_investment"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/investment"
+                    android:contentDescription="投資"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/investment"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- 酒類 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp">
+                <ImageButton
+                    android:id="@+id/button_others"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/other"
+                    android:contentDescription="其他"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/others"
+                    android:textSize="14.5sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </GridLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+    <!-- 輸入列 -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/input_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/calculator_button"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingVertical="8dp"
+            android:hint="Enter title"/>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/calculator_button"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/calendar"
+            android:contentDescription="日曆"/>
+    </LinearLayout>
+
+    <!-- 計算機按鍵區塊 -->
+    <LinearLayout
+        android:id="@+id/calculatorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp"
+        android:background="@android:color/transparent">
+
+        <!-- 第一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="7"
+                android:textSize="18sp"
+                android:padding="8dp" />
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="8"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="9"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button_divide"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="/"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- 第二行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="4"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="5"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="6"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button_multiply"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="*"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- 第三行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="2"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="3"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button_minus"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- 第四行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_equal"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="="
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+            <Button
+                android:id="@+id/button_dot"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:text="."/>
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部按鈕 -->
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#C62828"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/add"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#1565C0"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.cash" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="DialogMenuButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textColor">#2196F3</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_btn_outline</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="DialogMenuButton_Chart" parent="DialogMenuButton">
+        <item name="android:textColor">#FFA000</item>
+        <item name="android:background">@drawable/bg_btn_outline</item>
+    </style>
+
+    <style name="TabButtonSelected" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FFD265</item>
+        <item name="android:textColor">#222</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="TabButtonUnselected" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FFF</item>
+        <item name="android:textColor">#222</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="DateTabButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FFF</item>
+        <item name="android:textColor">#222</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="DateTabButtonSelected" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FFD265</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

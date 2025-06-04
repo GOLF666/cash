@@ -1,0 +1,254 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp"
+        android:gravity="center_horizontal">
+
+        <!-- 標題 -->
+        <TextView
+            android:id="@+id/tv_budget_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_setting_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#F57C00"
+            android:layout_marginBottom="18dp" />
+
+        <!-- === 預算卡片：每日 === -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_orange"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:src="@drawable/day"
+                    android:scaleType="centerInside"
+                    android:textSize="22sp"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/budget_daily"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#F57C00"/>
+
+                <EditText
+                    android:id="@+id/et_budget_day"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:minHeight="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_input_bg"
+                    android:gravity="center"
+                    android:hint="@string/budget_hint"
+                    android:inputType="numberDecimal"
+                    android:textColor="#333333"
+                    android:textSize="22sp"
+                    android:padding="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+
+            <!-- 已設金額放區塊底下 -->
+            <TextView
+                android:id="@+id/tv_budget_show_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="#BF360C"
+                android:gravity="end"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- === 預算卡片：每週 === -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_blue"
+            android:padding="16dp"
+            android:layout_marginBottom="14dp"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:src="@drawable/week"
+                    android:scaleType="centerInside"
+                    android:textSize="22sp"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/budget_weekly"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E88E5"/>
+                <EditText
+                    android:id="@+id/et_budget_week"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:minHeight="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_input_bg"
+                    android:hint="@string/budget_hint"
+                    android:textSize="22sp"
+                    android:textColor="#333333"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_budget_show_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="#BF360C"
+                android:gravity="end"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- === 預算卡片：每月 === -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_green"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:src="@drawable/month"
+                    android:scaleType="centerInside"
+                    android:textSize="22sp"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/budget_monthly"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#43A047"/>
+                <EditText
+                    android:id="@+id/et_budget_month"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:minHeight="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_input_bg"
+                    android:hint="@string/budget_hint"
+                    android:textSize="22sp"
+                    android:textColor="#333333"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_budget_show_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="#BF360C"
+                android:gravity="end"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- 錯誤訊息 -->
+        <TextView
+            android:id="@+id/tv_budget_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_invalid"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#FF5252"
+            android:background="@drawable/rounded_input_error"/>
+
+        <!-- 儲存/重置按鈕 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btn_budget_save"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="@string/budget_save"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_button_orange"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:elevation="4dp"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/btn_budget_reset"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="@string/budget_reset"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_button_gray"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:elevation="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

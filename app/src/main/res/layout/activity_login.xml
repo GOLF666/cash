@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#49C0EC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="32dp"
+    android:paddingBottom="24dp">
+
+    <!-- 關閉按鈕 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/close"
+        android:layout_gravity="start"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="18dp"
+        android:contentDescription="關閉" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_circle_white"
+            android:scaleType="centerCrop"
+            android:contentDescription="App Logo"
+            android:outlineProvider="background"
+            android:src="@drawable/cash" />
+
+    <!-- Google 登錄按鈕 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_google_button"
+        android:gravity="center_vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/iv_google"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/google"
+            android:scaleType="centerInside"
+            android:contentDescription="Google"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:id="@+id/tv_google_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_with_google"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- 條款說明 -->
+    <TextView
+        android:id="@+id/tv_tos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tos_text"
+        android:textSize="14sp"
+        android:textColor="#3B444C"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+    <!-- 注意事項（圓角底白+微灰邊） -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_note_box"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textColor="#3B444C"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3dp"
+            android:fontFamily="sans-serif"
+            android:gravity="start"/>
+    </LinearLayout>
+
+</LinearLayout>

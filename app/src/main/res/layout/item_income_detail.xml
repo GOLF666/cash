@@ -1,0 +1,43 @@
+<!-- res/layout/item_expense_detail.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_income_detail_chip"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp">
+
+    <ImageView
+        android:id="@+id/iv_category_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="icon圖"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05/16"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="飲料"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginRight="12dp"/>
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$999"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- === 底層主內容 === -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- LOGO 區塊 -->
+            <TextView
+                android:id="@+id/logoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_blue_bg"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="@string/Logoname"
+                android:textColor="#1A237E"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:elevation="4dp" />
+
+            <!-- 日期＋設定按鈕 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton_calendar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="日曆"
+                    app:srcCompat="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="2025年05月15日"
+                    android:textSize="18sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_setting"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitCenter"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/settings"
+                    android:contentDescription="設定" />
+            </LinearLayout>
+
+            <!-- 💰 餘額圓形 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button_balance"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:background="@drawable/circle"
+                    android:contentDescription="當月餘額"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 提示文字 -->
+            <TextView
+                android:id="@+id/hintTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="@string/click_to_check"
+                android:textColor="#757575"
+                android:textSize="16sp" />
+
+            <!-- 收支按鈕 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/expand_button"
+                    android:layout_width="300dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#FF5252"
+                    android:text="@string/button_expense"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:elevation="4dp" />
+
+                <Button
+                    android:id="@+id/income_button"
+                    android:layout_width="300dp"
+                    android:layout_height="64dp"
+                    android:backgroundTint="#448AFF"
+                    android:text="@string/button_income"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:elevation="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- === 浮動設定面板 === -->
+    <LinearLayout
+        android:id="@+id/settingPanel"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_setting_panel"
+        android:padding="22dp"
+        android:elevation="30dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone">
+
+        <!-- ======= 登錄按鈕區塊（黃底圓頭像） ======= -->
+        <LinearLayout
+            android:id="@+id/loginPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFE082"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="2dp"
+            android:backgroundTint="#FFE082"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:id="@+id/iv_user"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/user"
+                android:background="@drawable/bg_circle_white"
+                android:scaleType="centerInside"
+                android:contentDescription="user" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_click"
+                    android:textColor="#222222"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_login_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_tip"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/arrow_right"
+                android:contentDescription="login" />
+        </LinearLayout>
+        <!-- ======= 登錄按鈕結束 ======= -->
+
+        <!-- 每日提醒 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="14dp"
+            android:padding="12dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:clipToPadding="false"
+            android:elevation="2dp"
+            android:backgroundTint="#F3EDFF"
+            android:clipChildren="false"
+            android:background="@drawable/bg_setting_panel">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/alarm"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:id="@+id/text_reminder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/daily_reminder"
+                android:textSize="17sp"
+                android:textColor="#333333"
+                android:gravity="start"/>
+            <Switch
+                android:id="@+id/switch_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:thumbTint="#43A047"
+                android:trackTint="#A5D6A7" />
+        </LinearLayout>
+
+        <!-- 選擇提醒時間 -->
+        <Button
+            android:id="@+id/btn_select_reminder_time"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/reminder_time_picker"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:background="@drawable/reminder_button_bg"
+            android:layout_marginBottom="14dp"
+            android:elevation="2dp" />
+
+        <!-- 語言切換 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:clipToPadding="false"
+            android:elevation="2dp"
+            android:backgroundTint="#E3F2FD"
+            android:clipChildren="false"
+            android:background="@drawable/bg_setting_panel">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/language"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:id="@+id/text_language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="@string/language_switch"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+            <Switch
+                android:id="@+id/switch_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:thumbTint="#43A047"
+                android:trackTint="#A5D6A7"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_set_budget"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/button_set_budget"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:background="@drawable/rounded_button_orange"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp" />
+
+        <!-- 匯出 -->
+        <Button
+            android:id="@+id/export_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/export"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:background="@drawable/rounded_button_green"
+            android:layout_marginBottom="2dp"
+            android:elevation="2dp" />
+    </LinearLayout>
+
+</FrameLayout>
