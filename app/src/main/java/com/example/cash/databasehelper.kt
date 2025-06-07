@@ -96,6 +96,74 @@ class databasehelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return dataList
     }
 
+    // 查詢某天的支出紀錄（type = false，即 0）
+    fun getExpenseByDate(userEmail: String, date: String): List<DataItem> {
+        return getFilteredByDate(userEmail, date, isExpense = true)
+    }
+
+    // 查詢某天的收入紀錄（type = true，即 1）
+    fun getIncomeByDate(userEmail: String, date: String): List<DataItem> {
+        return getFilteredByDate(userEmail, date, isExpense = false)
+    }
+
+    // 查詢某天的全部紀錄（收入 + 支出）
+    fun getAllRecordsByDate(userEmail: String, date: String): List<DataItem> {
+        val dataList = mutableListOf<DataItem>()
+        val db = this.readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT * FROM accountingTABLE WHERE date = ? AND user_email = ?",
+            arrayOf(date, userEmail)
+        )
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+                val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
+                val amountString = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_AMOUNT))
+                val type = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) == 1
+                val category = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORY))
+                val date = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATE))
+
+                val amount = amountString.toDoubleOrNull() ?: 0.0
+                dataList.add(DataItem(id, title, amount, type, category, date, userEmail))
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        db.close()
+        return dataList
+    }
+
+    // 🔒內部共用邏輯（根據收入/支出過濾）
+    private fun getFilteredByDate(userEmail: String, date: String, isExpense: Boolean): List<DataItem> {
+        val typeValue = if (isExpense) 0 else 1
+        val dataList = mutableListOf<DataItem>()
+        val db = this.readableDatabase
+
+        val cursor = db.rawQuery(
+            "SELECT * FROM accountingTABLE WHERE date = ? AND user_email = ? AND type = ?",
+            arrayOf(date, userEmail, typeValue.toString())
+        )
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+                val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
+                val amountString = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_AMOUNT))
+                val type = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_TYPE)) == 1
+                val category = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORY))
+                val date = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATE))
+
+                val amount = amountString.toDoubleOrNull() ?: 0.0
+                dataList.add(DataItem(id, title, amount, type, category, date, userEmail))
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        db.close()
+        return dataList
+    }
+
     fun titleExists(title: String, userEmail: String): Boolean {
         val db = this.readableDatabase
         val cursor = db.rawQuery(

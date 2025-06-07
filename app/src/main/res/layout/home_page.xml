@@ -115,43 +115,48 @@
 
                 <Button
                     android:id="@+id/expand_button"
-                    android:layout_width="300dp"
-                    android:layout_height="64dp"
-                    android:layout_marginBottom="5dp"
-                    android:backgroundTint="#FF5252"
+                    android:layout_width="280dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/btn_expense_bg"
                     android:text="@string/button_expense"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:elevation="4dp" />
+                    android:elevation="6dp" />
 
                 <Button
                     android:id="@+id/income_button"
-                    android:layout_width="300dp"
-                    android:layout_height="64dp"
-                    android:backgroundTint="#448AFF"
+                    android:layout_width="280dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/btn_income_bg"
                     android:text="@string/button_income"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:elevation="4dp" />
+                    android:elevation="6dp" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
+    <ScrollView
+        android:id="@+id/settingPanelContainer"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        android:fillViewport="true">
 
-    <!-- === 浮動設定面板 === -->
     <LinearLayout
         android:id="@+id/settingPanel"
-        android:layout_width="280dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/bg_setting_panel"
         android:padding="22dp"
-        android:elevation="30dp"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="180dp"
-        android:visibility="gone">
+        android:elevation="30dp">
 
         <!-- ======= 登錄按鈕區塊（黃底圓頭像） ======= -->
         <LinearLayout
@@ -212,6 +217,17 @@
                 android:contentDescription="login" />
         </LinearLayout>
         <!-- ======= 登錄按鈕結束 ======= -->
+        <Button
+            android:id="@+id/btnChatWithGpt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/btn_chat_with_gpt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:background="@drawable/chat_card_bg"
+            android:layout_marginBottom="14dp"
+            android:elevation="2dp" />
 
         <!-- 每日提醒 -->
         <LinearLayout
@@ -329,5 +345,5 @@
             android:layout_marginBottom="2dp"
             android:elevation="2dp" />
     </LinearLayout>
-
+    </ScrollView>
 </FrameLayout>

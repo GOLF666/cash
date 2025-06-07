@@ -58,12 +58,12 @@ class MainActivity : AppCompatActivity() {
         isLoggedIn = userEmail.isNotEmpty()
 
         // 設定區 panel 跟設定齒輪
-        val settingPanel = findViewById<LinearLayout>(R.id.settingPanel)
+        val settingPanelContainer = findViewById<ScrollView>(R.id.settingPanelContainer)
         val imageButtonSetting = findViewById<ImageButton>(R.id.imageButton_setting)
-        settingPanel.visibility = View.GONE
+        settingPanelContainer.visibility = View.GONE
         imageButtonSetting.setOnClickListener {
-            settingPanel.visibility =
-                if (settingPanel.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+            settingPanelContainer.visibility =
+                if (settingPanelContainer.visibility == View.VISIBLE) View.GONE else View.VISIBLE
         }
 
         // 語言偏好
@@ -161,6 +161,16 @@ class MainActivity : AppCompatActivity() {
             if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 1001)
             }
+        }
+
+        val chatBtn = findViewById<Button>(R.id.btnChatWithGpt)
+        chatBtn.setOnClickListener {
+            if (!isLoggedIn) {
+                Toast.makeText(this, getString(R.string.toast_login_first), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
         }
 
         btnSelectTime.setOnClickListener {
@@ -284,6 +294,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_select_reminder_time).text = getString(R.string.reminder_time_picker)
         findViewById<TextView>(R.id.text_language).text = getString(R.string.language_switch)
         findViewById<TextView>(R.id.btn_set_budget).text = getString(R.string.button_set_budget)
+        findViewById<TextView>(R.id.btnChatWithGpt).text = getString(R.string.btn_chat_with_gpt)
         val tvLogin = findViewById<TextView>(R.id.tv_login)
         val tvLoginTip = findViewById<TextView>(R.id.tv_login_tip)
         if (isLoggedIn) {

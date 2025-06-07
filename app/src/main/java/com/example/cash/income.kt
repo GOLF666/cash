@@ -152,6 +152,23 @@ class income : AppCompatActivity() {
             insertData()
         }
 
+        val title = intent.getStringExtra("title")
+        val amount = intent.getStringExtra("amount")
+        val category = intent.getStringExtra("category")
+        val date = intent.getStringExtra("date")
+        val fromGpt = intent.getBooleanExtra("from_gpt", false)
+
+        if (fromGpt) {
+            titleTextView.text = title
+            resultTextView.text = amount
+            currentCategory = category ?: ""
+            selectedDate = date ?: selectedDate
+
+            // ✅ 加上這行顯示「已選擇：xxx」
+            if (!currentCategory.isNullOrEmpty()) {
+                Toast.makeText(this, getString(R.string.category_selected, currentCategory), Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     private fun appendNumber(number: String, resultTextView: TextView) {
         currentInput += number

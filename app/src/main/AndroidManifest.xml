@@ -41,7 +41,7 @@
         <activity android:name=".IncomeChartActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".BudgetActivity"/>
-
+        <activity android:name=".ChatActivity"/>
         <receiver android:name=".ReminderReceiver" android:exported="true" />
     </application>
 </manifest>

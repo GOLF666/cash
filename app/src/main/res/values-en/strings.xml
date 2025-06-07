@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">cash</string>
-    <string name="Logoname">MONEYTROL</string>
+    <string name="Logoname">Money Manager</string>
     <string name="Date">Date</string>
     <string name="logo">Date Logo</string>
     <string name="money_value">$900</string>
@@ -168,6 +168,18 @@
 
     <string name="budget_exceed_50">⚠️budget exceeds 50%</string>
     <string name="budget_exceed_100">🚨budget has been used up，Please be careful with spending</string>
+
+    <string name="title_header"> Minty🐸AI Assistant</string>
+    <string name="input_hint">Hi~Did you spend or earn anything? Let’s note it down!🩵</string>
+    <string name="btn_send">Send to Minty ✉️</string>
+    <string name="reply_header">💬 Minty Reply</string>
+    <string name="btn_chat_with_gpt">AI Assistant</string>
+
+    <string name="conversion_success">✅ Minty successfully parsed your entry!</string>
+    <string name="label_amount">💵 Amount:</string>
+    <string name="label_category">📂 Category:</string>
+    <string name="label_date">📅 Date:</string>
+    <string name="redirect_hint">👉 Record parsed. Redirecting you to the entry page now.</string>
 
     <!-- Switch Language -->
     <string name="language_switch">中文 / English</string>
